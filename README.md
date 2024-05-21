@@ -1,4 +1,3 @@
-# IngridYu
-Homepage of Runyi Yu
+# ingrid725.github.io
 
-https://ingridyu.github.io/
+https://ingrid725.github.io/
