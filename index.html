@@ -15,6 +15,291 @@
     .smaller-image {
       width: 20%;
     }
+
+		.section-heading {
+			position: relative;
+			display: inline-block;
+			margin-top: 1.1em;
+			margin-bottom: 0.85em;
+			padding: 0.2em 18px 0.45em 16px;
+			border-bottom: none;
+			color: #FD6C6C;
+			font-size: 1.42em;
+			line-height: 1.25;
+			letter-spacing: 0.01em;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.85);
+			transform-origin: left center;
+			overflow: visible;
+			transition: transform 0.42s ease, color 0.32s ease, text-shadow 0.32s ease;
+		}
+
+		.section-heading::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			width: 6px;
+			height: 1.15em;
+			border-radius: 999px;
+			background: linear-gradient(180deg, #ffd7d7 0%, #FD6C6C 100%);
+			transform: translateY(-50%);
+			box-shadow: 0 6px 14px rgba(253, 108, 108, 0.26);
+			transition: height 0.28s ease, box-shadow 0.28s ease;
+		}
+
+		.section-heading::after {
+			content: "";
+			position: absolute;
+			left: 16px;
+			bottom: 0;
+			width: min(calc(100vw - 150px), 860px);
+			height: 3px;
+			border-radius: 999px;
+			background: linear-gradient(90deg, #FD6C6C 0%, #ffc2c2 65%, rgba(255, 194, 194, 0) 100%);
+			transform: scaleX(0.32);
+			transform-origin: left center;
+			opacity: 0.7;
+			transition: transform 0.6s ease, opacity 0.4s ease;
+		}
+
+		.section-heading:hover,
+		.section-heading.section-focus {
+			color: #FD6C6C;
+			transform: translateX(4px) scale(1.04);
+			text-shadow: 0 4px 14px rgba(253, 108, 108, 0.22);
+		}
+
+		.section-heading:hover::before,
+		.section-heading.section-focus::before {
+			height: 1.35em;
+			box-shadow: 0 10px 20px rgba(253, 108, 108, 0.3);
+		}
+
+		.section-heading:hover::after,
+		.section-heading.section-focus::after {
+			transform: scaleX(0.72);
+			opacity: 1;
+		}
+
+		.section-heading.section-active {
+			color: #e85c5c;
+			transform: translateX(6px) scale(1.1);
+			text-shadow: 0 8px 18px rgba(253, 108, 108, 0.26);
+		}
+
+		.section-heading.section-active::before {
+			height: 1.5em;
+			box-shadow: 0 12px 22px rgba(253, 108, 108, 0.32);
+		}
+
+		.hero-name,
+		.hero-role {
+			color: #FD6C6C;
+		}
+
+		.bio-note {
+			margin: 0 0 12px 0;
+			padding: 0;
+			border: none;
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+		}
+
+		.bio-note-text {
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+			padding: 0;
+			border: none;
+			border-radius: 0;
+			background: transparent;
+			color: #111111;
+			font-style: italic;
+			font-weight: 400;
+			letter-spacing: 0.01em;
+			box-shadow: none;
+		}
+
+		.bio-note-highlight {
+			color: #FD6C6C;
+			font-weight: 700;
+		}
+
+		.bio-note-icon {
+			position: relative;
+			width: 18px;
+			height: 16px;
+			flex: 0 0 18px;
+			border: 1.5px solid #FD6C6C;
+			border-radius: 3px;
+			background: transparent;
+			box-sizing: border-box;
+		}
+
+		.bio-note-icon::before,
+		.bio-note-icon::after {
+			content: "";
+			position: absolute;
+			left: 3px;
+			right: 3px;
+			height: 1.5px;
+			background: rgba(253, 108, 108, 0.7);
+			border-radius: 999px;
+		}
+
+		.bio-note-icon::before {
+			top: 5px;
+		}
+
+		.bio-note-icon::after {
+			top: 9px;
+		}
+
+		.pub-category-row td {
+			padding: 8px 0 16px 0;
+		}
+
+		.pub-category {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			color: #FD6C6C;
+			font-size: 1.1em;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+		}
+
+		.pub-category::before,
+		.pub-category::after {
+			content: "";
+			flex: 1;
+			height: 1px;
+			border-radius: 999px;
+			background: rgba(253, 108, 108, 0.45);
+		}
+
+		.pub-category::before {
+			margin-right: 16px;
+		}
+
+		.pub-category::after {
+			margin-left: 16px;
+		}
+
+		.section-heading.section-active::after {
+			transform: scaleX(1);
+			opacity: 1;
+		}
+
+		.community-services {
+			margin-top: 14px;
+			padding: 10px 0 0 0;
+			border: none;
+			border-radius: 0;
+			background: transparent;
+			box-shadow: none;
+		}
+
+		.community-intro {
+			margin: 0 0 18px 0;
+			color: #3f4c63;
+			font-size: 1.03em;
+			line-height: 1.7;
+		}
+
+		.service-list {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: grid;
+			gap: 16px;
+		}
+
+		.service-list li {
+			margin: 0;
+			padding: 18px 20px;
+			border: 1px solid rgba(253, 108, 108, 0.22);
+			border-radius: 18px;
+			background: transparent;
+			box-shadow: none;
+		}
+
+		.service-title {
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #FD6C6C;
+			font-size: 1.08em;
+			letter-spacing: 0.01em;
+		}
+
+		.service-item-group {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.service-tag {
+			display: inline-block;
+			padding: 6px 14px;
+			border: 1px solid #cbd9ee;
+			border-radius: 999px;
+			background: #ffffff;
+			color: #36598f;
+			font-size: 0.92em;
+			font-weight: 600;
+			white-space: nowrap;
+			box-shadow: 0 4px 10px rgba(82, 123, 189, 0.08);
+		}
+
+		a.service-tag {
+			text-decoration: none;
+			transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+		}
+
+		a.service-tag:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 8px 18px rgba(82, 123, 189, 0.14);
+			filter: brightness(0.98);
+		}
+
+		.tag-cvpr {
+			background: #eef4ff;
+			border-color: #c8d8fb;
+			color: #315ca8;
+		}
+
+		.tag-aaai {
+			background: #f5efff;
+			border-color: #d8c9fb;
+			color: #6650a8;
+		}
+
+		.tag-neurips {
+			background: #edf8f3;
+			border-color: #c6e7d4;
+			color: #2f7c58;
+		}
+
+		.tag-iccv {
+			background: #fff3ea;
+			border-color: #f3d2bc;
+			color: #a56433;
+		}
+
+		.tag-ijcai {
+			background: #fff7dc;
+			border-color: #eddca4;
+			color: #8a6a14;
+		}
+
+		.tag-journal {
+			background: #eef7fb;
+			border-color: #c6dfea;
+			color: #3d6984;
+		}
 </style>
 
 
@@ -28,11 +313,11 @@
 		<tr>
 			<td width="670">
 				<div id="toptitle">					
-					<h1>Runyi (Ingrid) Yu </h1>
+					<h1 class="hero-name">Runyi (Ingrid) Yu </h1>
 					<h1></h1>
 					<h1></h1>
 					</div>
-				<h3>PhD Student</h3>
+				<h3 class="hero-role">PhD Student</h3>
 				<p>
 					Hong Kong University of Science and Technology <br>
 					Clear Water Bay, Kowloon, HongKong.<br>
@@ -52,7 +337,7 @@
 	</tr></tbody>
 </table>
 
-<h2>Biography</h2>
+<h2 class="section-heading">Biography</h2>
 <p>
 	I am a second-year phd student at <a href="https://hkust.edu.hk/zh-hans">HKUST</a>, supervised by <a href="https://cqf.io/">Qifeng Chen</a>. 
 	I obtained my Master's Degree from <a href="https://pku.edu.cn"> Peking University </a> in 2024 and Bachelor's Degree from <a href="https://www.bnu.edu.cn/">Beijing Normal University</a> in 2021. 
@@ -63,15 +348,15 @@
 	From 2021 to 2022, I focused on the Transformer-based Understanding researches. 
 	From 2023 to 2024, I worked on image/video generation and talking head generation.   
 	Now, I am exploring the Embodied AI, especially the Humanoid Manipulation.
-<p><i style="color: red; display: inline;">Cooperation and discussion are welcomed. </i></p>
-<p><i style="color: red; display: inline;">I will be actively seeking job opportunities starting in the second half of this year. Please feel free to reach out if you see a potential fit.</i></p>
+<p class="bio-note"><span class="bio-note-text"><span class="bio-note-icon" aria-hidden="true"></span>Cooperation and discussion are welcomed.</span></p>
+<p class="bio-note"><span class="bio-note-text"><span class="bio-note-icon" aria-hidden="true"></span>I will be actively seeking job opportunities <span class="bio-note-highlight">since June 2026.</span></p>
 
 
-<h2>News</h2>
+<h2 class="section-heading">News</h2>
 <div style="height: 240px; overflow: auto;">
 <ul>
 	<li>
-		[03/2025] One paper was accepted by <a href="https://2025.ieee-icra.org/"> ICRA 2025 </a>.
+		[03/2025] One paper was accepted by <a href="https://2025.ieee-icra.org/"> ICRA 2026 </a>.
 	</li>
 	<li>
 		[03/2025] One paper was accepted by <a href="https://iccv.thecvf.com/"> ICCV 2025 </a>.
@@ -112,7 +397,7 @@
 </ul>
 </div>
 
-<h2>Internship</h2>
+<h2 class="section-heading">Internship</h2>
 <table id="tbPublications" width="100%">
 	<tbody>
 	<p></p>
@@ -200,7 +485,7 @@
 	<!--########################-->
 </tbody></table>
 
-<h2>Education</h2>
+<h2 class="section-heading">Education</h2>
 <table id="tbPublications" width="100%">
 	<tbody>
 	<tr>
@@ -248,7 +533,7 @@
 </tbody></table>
 
 
-<h2> Selected Publications </h2>
+<h2 class="section-heading">Selected Publications</h2>
 <table id="tbPublications" width="100%">
 	<tbody>
 		<!-- <td><b>/*Preprints*/</b>
@@ -256,9 +541,9 @@
 		</td> -->
 	
 		<!-- ------------------------ -->
-		<td><b>/*Embodied AI*/</b>
-		<p></p>
-		</td>
+		<tr class="pub-category-row">
+			<td colspan="2"><span class="pub-category">Embodied AI</span></td>
+		</tr>
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -298,7 +583,25 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<!--########################-->
-		<!-- <tr>
+		<tr>
+			<td width="306">
+			<img src="./pub/2025_Switch.gif" width="285px" style="box-shadow: 4px 4px 8px #888">
+			</td>
+			<td>
+			<p><b> Switch: Learning Agile Skills Switching for Humanoid Robots </b></p>
+			<em>ICRA 2026</em>
+			<p> Yuen Fui Lau*, Qihan Zhao*, Yinhuai Wang*(project lead), <b>Runyi Yu</b>, Hok Wai Tsui, Qifeng Chen, Ping Tan</p>
+			<p> [<a href="">paper</a>] [<a href="">project page</a>]
+			</p>
+			</td>
+		</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<!--########################-->
+		<tr>
 			<td width="306">
 			<img src="./pub/2025_hot.gif" width="285px" style="box-shadow: 4px 4px 8px #888">
 			</td>
@@ -314,7 +617,7 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
-		<tr>&nbsp</tr> -->
+		<tr>&nbsp</tr>
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -352,9 +655,9 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 
-		<td><b>/*Talking Head*/</b>
-		<p></p>
-		</td>
+		<tr class="pub-category-row">
+			<td colspan="2"><span class="pub-category">Talking Head</span></td>
+		</tr>
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -374,7 +677,7 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<!--########################-->
-		<tr>
+		<!-- <tr>
 			<td width="306">
 			<img src="./pub/2024_Instruct.gif" width="285px" style="box-shadow: 4px 4px 8px #888">
 			</td>
@@ -390,7 +693,7 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
-		<tr>&nbsp</tr>
+		<tr>&nbsp</tr> -->
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -410,9 +713,9 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		
-		<td><b>/*Computer Vision*/</b>
-		<p></p>
-		</td>
+		<tr class="pub-category-row">
+			<td colspan="2"><span class="pub-category">Computer Vision</span></td>
+		</tr>
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -433,7 +736,7 @@
 		<tr>&nbsp</tr>
 		
 		<!--########################-->
-		<tr>
+		<!-- <tr>
 			<td width="306">
 			<img src="./pub/2023_ACSeg.png" width="285px" style="box-shadow: 4px 4px 8px #888">
 			</td>
@@ -449,10 +752,10 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
-		<tr>&nbsp</tr>
+		<tr>&nbsp</tr> -->
 		
 		<!--########################-->
-		<tr>
+		<!-- <tr>
 			<td width="306">
 			<img src="./pub/2023_Unlimited.png" width="285px" style="box-shadow: 4px 4px 8px #888">
 			</td>
@@ -468,7 +771,7 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
-		<tr>&nbsp</tr>
+		<tr>&nbsp</tr> -->
 		
 		<!--########################-->
 		<tr>
@@ -491,19 +794,27 @@
 	</tbody>
 </table>
 
-<h2>Community Services</h2>
-<ul>
-	<li>	
-	<b>Student Reviewers:</b><br>
-	The IEEE/CVF Conference on Computer Vision and Pattern Recognition 2026 (CVPR 2026)<br>
-	The Fortieth AAAI Conference on Artificial Intelligence (AAAI 2026)<br>
-	The Thirty-Ninth Annual Conference on Neural Information Processing Systems (Nerips 2025)<br>
-	International Conference on Computer Vision 2025 (ICCV 2025)<br>
-	The 34rd International Joint Conference on Artificial Intelligence (IJCAI 2025)<br>
-	The 33rd International Joint Conference on Artificial Intelligence (IJCAI 2024)<br>
-	IEEE Transactions on Multimedia (TMM)<br>
-	</li>
-</ul>
+<h2 class="section-heading">Community Services</h2>
+<div class="community-services">
+	<ul class="service-list">
+		<li>
+			<div class="service-title">Conference Reviewer</div>
+			<div class="service-item-group">
+				<a class="service-tag tag-cvpr" href="https://cvpr.thecvf.com/" target="_blank">CVPR 2026</a>
+				<a class="service-tag tag-aaai" href="https://aaai.org/conference/aaai/" target="_blank">AAAI 2026</a>
+				<a class="service-tag tag-neurips" href="https://neurips.cc/" target="_blank">NeurIPS 2025</a>
+				<a class="service-tag tag-iccv" href="https://iccv.thecvf.com/" target="_blank">ICCV 2025</a>
+				<a class="service-tag tag-ijcai" href="https://ijcai.org/" target="_blank">IJCAI [2024, 2025]</a>
+			</div>
+		</li>
+		<li>
+			<div class="service-title">Journal Reviewer</div>
+			<div class="service-item-group">
+				<a class="service-tag tag-journal" href="https://signalprocessingsociety.org/publications-resources/ieee-transactions-multimedia" target="_blank">IEEE Transactions on Multimedia (TMM)</a>
+			</div>
+		</li>
+	</ul>
+</div>
 
 <div id="footer">
 	<div id="footer-text"></div>
@@ -516,6 +827,94 @@
 </div>
 <p><center> &copy; Ingrid Yu </center></p>
 
+<script type="text/javascript">
+	(function () {
+		var layout = document.getElementById("layout-content");
+		var headings = Array.prototype.slice.call(document.querySelectorAll(".section-heading"));
+		if (!headings.length) {
+			return;
+		}
+
+		function clearFocusHeading() {
+			for (var i = 0; i < headings.length; i++) {
+				headings[i].classList.remove("section-focus");
+			}
+		}
+
+		function setFocusHeadingByMouse(event) {
+			if (!layout) {
+				return;
+			}
+
+			var footer = document.getElementById("footer");
+			if (footer) {
+				var footerRect = footer.getBoundingClientRect();
+				if (event.clientY >= footerRect.top) {
+					clearFocusHeading();
+					return;
+				}
+			}
+
+			var hoverY = window.scrollY + event.clientY;
+			var focusIndex = -1;
+
+			for (var i = 0; i < headings.length; i++) {
+				var currentTop = headings[i].offsetTop;
+				var nextTop = i < headings.length - 1 ? headings[i + 1].offsetTop : (footer ? footer.offsetTop : document.body.scrollHeight);
+
+				if (hoverY >= currentTop && hoverY < nextTop) {
+					focusIndex = i;
+					break;
+				}
+			}
+
+			for (var j = 0; j < headings.length; j++) {
+				if (j === focusIndex) {
+					headings[j].classList.add("section-focus");
+				} else {
+					headings[j].classList.remove("section-focus");
+				}
+			}
+		}
+
+		function setActiveHeading() {
+			var anchorY = window.scrollY + window.innerHeight * 0.3;
+			var activeIndex = 0;
+
+			for (var i = 0; i < headings.length; i++) {
+				var currentTop = headings[i].offsetTop;
+				var nextTop = i < headings.length - 1 ? headings[i + 1].offsetTop : document.body.scrollHeight;
+
+				if (anchorY >= currentTop && anchorY < nextTop) {
+					activeIndex = i;
+					break;
+				}
+
+				if (anchorY >= currentTop) {
+					activeIndex = i;
+				}
+			}
+
+			for (var j = 0; j < headings.length; j++) {
+				if (j === activeIndex) {
+					headings[j].classList.add("section-active");
+				} else {
+					headings[j].classList.remove("section-active");
+				}
+			}
+		}
+
+		if (layout) {
+			layout.addEventListener("mousemove", setFocusHeadingByMouse);
+			layout.addEventListener("mouseleave", clearFocusHeading);
+		}
+
+		window.addEventListener("scroll", setActiveHeading, { passive: true });
+		window.addEventListener("resize", setActiveHeading);
+		window.addEventListener("load", setActiveHeading);
+		setActiveHeading();
+	})();
+</script>
 
 </div>
 </body></html>
