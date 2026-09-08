@@ -166,8 +166,48 @@
 			top: 9px;
 		}
 
+		.publication-nav {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 14px;
+			margin: 2px 0 0;
+		}
+
+		.publication-nav a {
+			display: inline-block;
+			padding: 11px 20px;
+			border: 1px solid transparent;
+			border-radius: 999px;
+			color: #405064;
+			font-weight: 600;
+			text-decoration: none;
+			box-shadow: 0 4px 12px rgba(75, 88, 110, 0.12);
+			transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+		}
+		.publication-nav a:nth-child(1) { background: #effaf5; border-color: #cfeee0; color: #568b74; }
+		.publication-nav a:nth-child(2) { background: #fff5ed; border-color: #f8dfca; color: #a87858; }
+		.publication-nav a:nth-child(3) { background: #f7f2fc; border-color: #e5d8f3; color: #8067a0; }
+		.publication-nav a:nth-child(4) { background: #eff8fd; border-color: #d2e9f6; color: #5d83a0; }
+
+		.publication-nav a:hover,
+		.publication-nav a:focus-visible {
+			color: #26384f;
+			transform: translateY(-2px);
+			box-shadow: 0 8px 18px rgba(75, 88, 110, 0.18);
+			filter: saturate(1.08);
+		}
+
+		.publication-nav a:focus-visible {
+			outline: 2px solid #a63838;
+			outline-offset: 3px;
+		}
+
+		.pub-category-row {
+			scroll-margin-top: 24px;
+		}
+
 		.pub-category-row td {
-			padding: 8px 0 16px 0;
+			padding: 0 0 4px 0;
 		}
 
 		.pub-category {
@@ -182,11 +222,20 @@
 			text-transform: uppercase;
 		}
 
+		#embodied-ai .pub-category { color: #FD6C6C !important; }
+		#embodied-ai .pub-category::before, #embodied-ai .pub-category::after { background: rgba(253, 108, 108, 0.45) !important; }
+		#physics-animation .pub-category { color: #d39a73; }
+		#physics-animation .pub-category::before, #physics-animation .pub-category::after { background: #f7dfcc; }
+		#talking-head .pub-category { color: #a38bc1; }
+		#talking-head .pub-category::before, #talking-head .pub-category::after { background: #e5daf2; }
+		#computer-vision .pub-category { color: #82abc5; }
+		#computer-vision .pub-category::before, #computer-vision .pub-category::after { background: #d5eaf5; }
+
 		.pub-category::before,
 		.pub-category::after {
 			content: "";
 			flex: 1;
-			height: 1px;
+			height: 2px;
 			border-radius: 999px;
 			background: rgba(253, 108, 108, 0.45);
 		}
@@ -444,7 +493,7 @@
 	</td>
 	<tr>
 		<td width="306">
-		<img src="./internship/NR.jpg" width="120x" style="box-shadow: 4px 4px 8px #ffffff">
+		<img src="./internship/NR.png" width="200px" style="box-shadow: 4px 4px 8px #ffffff">
 		</td>
 		<td>
 		<p><b> Noitom Robotics </b></p>
@@ -465,7 +514,7 @@
 		<tr>&nbsp</tr>
 	<tr>
 		<td width="306">
-		<img src="./internship/Shlab.png" width="200x" style="box-shadow: 4px 4px 8px #ffffff">
+		<img src="./internship/Shlab.png" width="200px" style="box-shadow: 4px 4px 8px #ffffff">
 		</td>
 		<td>
 		<p><b> Shanghai AI Laboratory </b></p>
@@ -487,7 +536,7 @@
 	<tr>
 		<tr>
 		<td width="306">
-		<img src="./internship/Unitree.png" width="200x" style="box-shadow: 4px 4px 8px #ffffff">
+		<img src="./internship/Unitree.png" width="200px" style="box-shadow: 4px 4px 8px #ffffff">
 		</td>
 		<td>
 		<p><b> Unitree </b></p>
@@ -574,14 +623,16 @@
 
 
 <h2 class="section-heading">Selected Publications</h2>
+<nav class="publication-nav" aria-label="Publication categories">
+	<a href="#embodied-ai">Embodied AI</a>
+	<a href="#physics-animation">Physics Animation</a>
+	<a href="#talking-head">Talking Head</a>
+	<a href="#computer-vision">Computer Vision</a>
+</nav>
 <table id="tbPublications" width="100%">
 	<tbody>
-		<!-- <td><b>/*Preprints*/</b>
-			<p></p>
-		</td> -->
-	
 		<!-- ------------------------ -->
-		<tr class="pub-category-row">
+		<tr class="pub-category-row" id="embodied-ai">
 			<td colspan="2"><span class="pub-category">Embodied AI</span></td>
 		</tr>
 		<!--########################-->
@@ -609,10 +660,47 @@
 			</td>
 			<td>
 			<p><b> HumanX: Toward Agile and Generalizable Humanoid Interaction Skills from Human Videos </b></p>
-			<em>Preprint Arxiv</em>
+			<em>CORL 2026</em>
 			<p> Yinhuai Wang*, Qihan Zhao*, Yuen Fui Lau*, <b>Runyi Yu</b>, Hok Wai Tsui, Qifeng Chen, Jingbo Wang, Jiangmiao Pang, 
 				Ping Tan</p>
 			<p> [<a href="https://arxiv.org/abs/2602.02473">paper</a>] [<a href="https://wyhuai.github.io/human-x/">project page</a>]
+			</p>
+			</td>
+		</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<!--########################-->
+		<tr>
+			<td width="306">
+			<img src="./pub/2026_UMR.gif" width="285px" style="box-shadow: 4px 4px 8px #888">
+			</td>
+			<td>
+			<p><b> Unified Motion Retargeting for Humanoids with Learned Point Cloud Correspondence </b></p>
+			<em>Preprint Arxiv</em>
+			<p> Hanyang Cao*, Yuetong Fang*, Taesoo Kwon*, <b>Runyi Yu</b>, Ji Ma, Jing Tan, Yangchen Zhou, Baoze Du, Yi Gu, Yukang Gao, Ruoli Dai, Lei Han, Renjing Xu</p>
+			<p> [<a href="https://arxiv.org/pdf/2609.02134">paper</a>] [<a href="https://hanyang9.github.io/UMR/">project page</a>] [<a href="https://github.com/hanyang9/UMR">code</a>]
+			</p>
+			</td>
+		</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<tr>&nbsp</tr>
+		<!--########################-->
+		<tr>
+			<td width="306">
+			<img src="./pub/2026_HiPHI.gif" width="285px" style="box-shadow: 4px 4px 8px #888">
+			</td>
+			<td>
+			<p><b> HiPHI: A Large-Scale Benchmark for High-Precision Human Motion and Object-Interaction </b></p>
+			<em>Preprint Arxiv</em>
+			<p> Jiahao Ji*, Ji Ma*, Runhan Zhang*, <b>Runyi Yu</b>, Wenjia Wang, Weiheng Chi, Qianqian Peng, Weichao Yan, 
+				Yongfei Gu, Ye Tian, Ting Wu, Longwei Li, Chun Yuan, Ruoli Dai, Lei Han</p>
+			<p> [<a href="https://arxiv.org/abs/2510.11072">paper</a>] [<a href="https://noitom-robotics.github.io/hiphi/">project page</a>] [<a href="https://github.com/noitom-robotics/hiphi">code</a>]
 			</p>
 			</td>
 		</tr>
@@ -658,6 +746,15 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
+
+		
+		
+
+
+
+		<tr class="pub-category-row" id="physics-animation">
+			<td colspan="2"><span class="pub-category">Physics Animation</span></td>
+		</tr>
 		<!--########################-->
 		<tr>
 			<td width="306">
@@ -665,7 +762,7 @@
 			</td>
 			<td>
 			<p><b> HOT: Learning Generalizable Hand-Object Tracking from Synthetic Demonstrations </b></p>
-			<em>Preprint Arxiv</em>
+			<em>In Submission</em>
 			<p> <b>Runyi Yu*</b>, Hok Wai Tsui*, Xiaoyi Lin*, Yinhuai Wang*, Hui Zhang, Qihan Zhao, Ke Fan,Miao Li, Jie Song, Jingbo Wang, Qifeng Chen, Ping Tan</p>
 			<p> [<a href="https://arxiv.org/abs/2512.19583">paper</a>] [<a href="https://ingrid789.github.io/hot/">project page</a>] [<a href="https://github.com/wyhuai/Hand-Object-Tracking">code</a>]
 			</p>
@@ -713,7 +810,11 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 
-		<tr class="pub-category-row">
+
+
+
+
+		<tr class="pub-category-row" id="talking-head">
 			<td colspan="2"><span class="pub-category">Talking Head</span></td>
 		</tr>
 		<!--########################-->
@@ -771,7 +872,7 @@
 		<tr>&nbsp</tr>
 		<tr>&nbsp</tr>
 		
-		<tr class="pub-category-row">
+		<tr class="pub-category-row" id="computer-vision">
 			<td colspan="2"><span class="pub-category">Computer Vision</span></td>
 		</tr>
 		<!--########################-->
@@ -858,11 +959,12 @@
 		<li>
 			<div class="service-title">Conference Reviewer</div>
 			<div class="service-item-group">
+				<a class="service-tag tag-aaai" href="https://aaai.org/conference/aaai/" target="_blank">CORL 2026</a>
+				<a class="service-tag tag-aaai" href="https://aaai.org/conference/aaai/" target="_blank">ECCV 2026</a>
 				<a class="service-tag tag-cvpr" href="https://cvpr.thecvf.com/" target="_blank">CVPR 2026</a>
 				<a class="service-tag tag-aaai" href="https://aaai.org/conference/aaai/" target="_blank">AAAI 2026</a>
-				<a class="service-tag tag-neurips" href="https://neurips.cc/" target="_blank">NeurIPS 2025</a>
+				<a class="service-tag tag-neurips" href="https://neurips.cc/" target="_blank">NeurIPS [2025, 2026]</a>
 				<a class="service-tag tag-iccv" href="https://iccv.thecvf.com/" target="_blank">ICCV 2025</a>
-				<a class="service-tag tag-ijcai" href="https://ijcai.org/" target="_blank">IJCAI [2024, 2025]</a>
 			</div>
 		</li>
 		<li>
@@ -878,12 +980,6 @@
 	<div id="footer-text"></div>
 </div>
 
-<br>
-<br>
-<div style="width: 50%; height: auto; margin: auto;">
-	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=EnM8Dv_R4BwPuoOt8KTjf5RG332ti_DNDbS9_-0YE78&cl=ffffff&w=a"></script>
-</div>
-<p><center> &copy; Ingrid Yu </center></p>
 
 <script type="text/javascript">
 	(function () {
